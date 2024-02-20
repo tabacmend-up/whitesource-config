@@ -1,9 +1,0 @@
-{
-  "repositories": [
-    {
-      "fullName": "tabacmend-up/java-demo-up",
-      "branchName": "master",
-      "scanType": "sast"
-    }
-  ]
-}

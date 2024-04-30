@@ -5,11 +5,12 @@
     "baseBranches": [],
     "enableLicenseViolations": true,
     "enableReachability": true,
-    "exploitability": true
+    "exploitability": true,
+    "releaseBranches": ["v.*"]
   },
   "scanSettingsSAST": {
     "enableScan": true,
-    "scanPullRequests": false,
+    "scanPullRequests": true,
     "incrementalScan": true,
     "baseBranches": [],
     "snippetSize": 10
@@ -18,7 +19,12 @@
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
     "useMendCheckNames": true,
-    "strictMode": "warning"
+    "strictMode": "failure"
+  },
+  "releaseBranchSettings": {
+    "checkRunSettings.failOnLicenseViolation": true,
+    "checkRunSettings.strictMode": "failure",
+    "checkRunSettings.failOnVulnerabilityMinCvss": 9.0
   },
   "checkRunSettingsSAST": {
     "checkRunConclusionLevel": "failure",
@@ -34,11 +40,10 @@
     },
     "enableRenovate": true,
     "extends": [
-       "config:base",
-       "github>whitesource/merge-confidence:beta",
+       "config:recommended",
+       "mergeConfidence:all-badges",
        "github>mend-toolkit/mend-examples//Repo-Integration/Renovate/smart-merge"
-      ],
-    "dependencyDashboard": true
+      ]
   },
   "imageSettings": {
     "imageTracing": {

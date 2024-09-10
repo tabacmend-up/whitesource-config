@@ -13,6 +13,7 @@
     "scanPullRequests": true,
     "incrementalScan": true,
     "baseBranches": [],
+    "enableRemediation": true,
     "snippetSize": 10
   },
   "checkRunSettings": {
